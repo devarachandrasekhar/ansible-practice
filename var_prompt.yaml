@@ -2,11 +2,11 @@
   hosts: localhost
   become: yes 
 
-  tasks:
+  var_prompts:
   - name: USERNAME
-      prompt: enter user_name
-      private: yes
-
+    prompt: enter user_name
+    private: yes
+  tasks:
   - name: print the prompt values
     ansible.builtin.debug:
       msg: "username: {{USERNAME}}"  
