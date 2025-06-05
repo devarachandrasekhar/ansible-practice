@@ -4,8 +4,8 @@
 
   tasks:
   - name: USERNAME
-    prompt: enter user_name
-    private: yes
+      prompt: enter user_name
+      private: yes
 
   - name: print the prompt values
     ansible.builtin.debug:
