@@ -1,8 +1,7 @@
 - name: practice prompt variables
   hosts: localhost
-  become: yes 
 
-  var_prompts:
+  var_prompt:
   - name: USERNAME
     prompt: enter user_name
     private: yes
