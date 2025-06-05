@@ -4,6 +4,9 @@
   vars_prompt:
   - name: USERNAME
     prompt: enter user_name
+    private: no
+  - name: PASSWORD  
+    prompt: enter password
     private: yes
   tasks:
   - name: print the prompt values
