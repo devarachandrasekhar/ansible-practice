@@ -1,0 +1,12 @@
+- name: practice prompt variables
+  hosts: localhost
+  become: yes 
+
+  tasks:
+  - name: USERNAME
+    prompt: enter user_name
+    private: yes
+
+  - name: print the prompt values
+    ansible.builtin.debug:
+      msg: "username: {{USERNAME}}"  
