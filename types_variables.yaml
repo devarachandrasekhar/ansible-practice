@@ -2,7 +2,7 @@
   host: mangodb
   become: yes
   vars:
-    name: "nginx"
+    name: nginx
 
   tasks:
   - name: install nginx
