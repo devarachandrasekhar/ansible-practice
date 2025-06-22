@@ -1,17 +1,21 @@
 - name: install nginx
-  hosts: localhost
+  host: mangodb
   become: yes
+  vars:
+    name: "nginx"
 
   tasks:
-  - name: yum install nginx
+  - name: install nginx
     ansible.builtin.yum:
       name: nginx
       state: installed
-  - name: start service
-    ansible.builtin.service:
-      name: nginx
-      state: restarted
-      enabled: true 
 
-      #  
-      #  
+  - name: start server
+    ansible.builtin.service:
+      state: restarted
+      enabled: true
+
+  - name: print message
+    ansible.builtin.debug:
+      msg: "{{name}} installed"    
+
